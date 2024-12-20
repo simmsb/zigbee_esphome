@@ -378,6 +378,9 @@ void ZigBeeComponent::esp_zb_task_() {
     this->mark_failed();
     vTaskDelete(NULL);
   }
+
+  zb_set_ed_node_descriptor(0, false, 1);
+
   this->started_ = true;
   esp_zb_stack_main_loop();
 }

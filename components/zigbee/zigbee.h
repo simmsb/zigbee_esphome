@@ -14,6 +14,8 @@
 namespace esphome {
 namespace zigbee {
 
+extern "C" void zb_set_ed_node_descriptor(bool power_src, bool rx_on_when_idle, bool alloc_addr);
+
 static const char *const TAG = "zigbee";
 
 using device_params_t = struct DeviceParamsS {
